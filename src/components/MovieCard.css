@@ -1,0 +1,43 @@
+.movie {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    background-color: #222;
+    color: #fff; /* White text on dark background */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Adds subtle shadow for depth */
+}
+
+.movie:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* More prominent shadow on hover */
+    cursor: pointer;
+}
+
+.movie img {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image fills the frame without distorting */
+    border-top-left-radius: 10px; /* Rounded corners on the top of the image */
+    border-top-right-radius: 10px;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+}
+
+.movie:hover img {
+    opacity: 0.7; /* Reduces opacity to 70% when the card is hovered */
+}
+
+.bottom-part {
+    flex-grow: 1; /* Allows the text part to fill available space */
+    padding: 15px;
+    background-color: rgba(0,0,0,0.85); /* Dark overlay for readability */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers content in the bottom part */
+}
